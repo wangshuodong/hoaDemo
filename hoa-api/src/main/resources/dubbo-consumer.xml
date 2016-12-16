@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://code.alibabatech.com/schema/dubbo
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!--ams-->
+    <dubbo:reference id="authService" interface="com.cmiot.ams.service.AuthService"/>
+    <dubbo:reference id="adminService" interface="com.cmiot.ams.service.AdminService"/>
+    <dubbo:reference id="roleService" interface="com.cmiot.ams.service.RoleService"/>
+    <dubbo:reference id="appUserService" interface="com.cmiot.ams.service.AppUserService"/>
+    <dubbo:reference id="areaService" interface="com.cmiot.ams.service.AreaService"/>
+    <dubbo:reference id="configService" interface="com.cmiot.ams.service.ConfigService"/>
+    <dubbo:reference id="digestUserService" interface="com.cmiot.ams.service.DigestUserService"/>
+    <!--bi-->
+    <dubbo:reference id="reportService" interface="com.cmiot.bi.service.ReportService"/>
+    <!--rms-->
+    <dubbo:reference id="commonSearchService" interface="com.cmiot.rms.services.CommonSearchService"/>
+    <dubbo:reference id="deviceTypeManagerService" interface="com.cmiot.rms.services.DeviceTypeManagerService"/>
+    <dubbo:reference id="firmwareInfoService" interface="com.cmiot.rms.services.FirmwareInfoService"/>
+    <dubbo:reference id="firmwareUpgradeTaskService" interface="com.cmiot.rms.services.FirmwareUpgradeTaskService"/>
+    <dubbo:reference id="gatewayInfoInterface" interface="com.cmiot.rms.services.GatewayInfoInterface"/>
+    <dubbo:reference id="sendInstructService" interface="com.cmiot.rms.services.SendInstructService"/>
+    <dubbo:reference id="gatewayManageService" interface="com.cmiot.rms.services.GatewayManageService"/>
+    <dubbo:reference id="logManagerService" interface="com.cmiot.rms.services.LogManagerService"/>
+    <dubbo:reference id="gatewayBaseInfoService" interface="com.cmiot.rms.services.GatewayBaseInfoService"/>
+    <dubbo:reference id="gatewayBatchSetTaskInterface" interface="com.cmiot.rms.services.GatewayBatchSetTaskInterface"/>
+    <dubbo:reference id="wirelessNetworkSettingService" interface="com.cmiot.rms.services.WirelessNetworkSettingService"/>
+    <dubbo:reference id="homeNetworkConfigService" interface="com.cmiot.rms.services.HomeNetworkConfigService"/>
+    <dubbo:reference id="familyNetworkSettingService" interface="com.cmiot.rms.services.FamilyNetworkSettingService"/>
+    <dubbo:reference id="businessCategoryService" interface="com.cmiot.rms.services.BusinessCategoryService"/>
+    <dubbo:reference id="gatewaySpeedTrafficInfoService" interface="com.cmiot.rms.services.GatewaySpeedTrafficInfoService"/>
+    <dubbo:reference id="cpeExpertConfigService" interface="com.cmiot.rms.services.CpeExpertConfigService"/>
+    <dubbo:reference id="gatewayBackupFileTaskService" interface="com.cmiot.rms.services.GatewayBackupFileTaskService"/>
+    <dubbo:reference id="gatewayBackupFileService" interface="com.cmiot.rms.services.GatewayBackupFileService"/>
+    <dubbo:reference id="diagnoisticeTracerouteService" interface="com.cmiot.rms.services.DiagnoisticeTracerouteService"/>
+    <dubbo:reference id="diagnosticeHttpService" interface="com.cmiot.rms.services.DiagnosticeHttpService"/>
+    <dubbo:reference id="diagnosticePppoeService" interface="com.cmiot.rms.services.DiagnosticePppoeService"/>
+    <dubbo:reference id="diagnosticsDhcpService" interface="com.cmiot.rms.services.DiagnosticsDhcpService"/>
+    <dubbo:reference id="gatewayLogFileService" interface="com.cmiot.rms.services.GatewayLogFileService"/>
+    <dubbo:reference id="pluginAccessControlService" interface="com.cmiot.rms.services.GatewayPluginAccessControlService"/>
+    <dubbo:reference id="diagnosticeVoipService" interface="com.cmiot.rms.services.DiagnosticeVoipService"/>
+    <dubbo:reference id="workOrderInterface" interface="com.cmiot.rms.services.WorkOrderInterface"/>
+    <dubbo:reference id="workOrderManagerService" interface="com.cmiot.rms.services.WorkOrderManagerService"/>
+    <dubbo:reference id="gatewayFlowrateTaskService" interface="com.cmiot.rms.services.GatewayFlowrateTaskService"/>
+    <dubbo:reference id="dataBaseService" interface="com.cmiot.rms.services.DataBaseService"/>
+    <dubbo:reference id="gatewayBusinessService" interface="com.cmiot.rms.services.GatewayBusinessService"/>
+    <dubbo:reference id="gatewayGroupManagementService" interface="com.cmiot.rms.services.GatewayGroupManagementService"/>
+    <dubbo:reference id="systemParameterConfigService" interface="com.cmiot.rms.services.SystemParameterConfigService"/>
+    <dubbo:reference id="gatewayNetworkAccessSettingService" interface="com.cmiot.rms.services.GatewayNetworkAccessSettingService"/>
+
+    <!--bms-->
+    <dubbo:reference id="pluginDeviceService" interface="com.tydic.service.PluginDeviceService"/>
+    <dubbo:reference id="pluginVersionService" interface="com.tydic.service.PluginVersionService"/>
+    <dubbo:reference id="appHandleService" interface="com.tydic.inter.app.service.AppHandleService"/>
+    <dubbo:reference id="gatewayHandleService" interface="com.tydic.inter.app.service.GatewayHandleService"/>
+    <dubbo:reference id="pluginHandleService" interface="com.tydic.inter.app.service.PluginHandleService"/>
+    <dubbo:reference id="pluginManageService" interface="com.tydic.inter.flfop.service.PluginManageService"/>
+    <dubbo:reference id="businessManageService" interface="com.tydic.inter.flfop.service.BusinessManageService"/>
+    <dubbo:reference id="rmsGatewayReportService" interface="com.tydic.rms.service.RmsGatewayReportService"/>
+    <dubbo:reference id="bmsHandleService" interface="com.tydic.inter.except.service.BmsHandleService"/>
+    <dubbo:reference id="pluginBatchService" interface="com.tydic.inter.app.service.PluginBatchService"/>
+
+    <!--box-->
+    <dubbo:reference id="boxDiagnoisticePingService" interface="com.cmiot.rms.services.BoxDiagnoisticePingService"/>
+    <dubbo:reference id="boxDiagnoisticeTracerouteService" interface="com.cmiot.rms.services.BoxDiagnoisticeTracerouteService"/>
+    <dubbo:reference id="boxManageService" interface="com.cmiot.rms.services.BoxManageService"/>
+    <dubbo:reference id="boxInterfaceService" interface="com.cmiot.rms.services.BoxInterfaceService"/>
+    <dubbo:reference id="boxCommonSearchService" interface="com.cmiot.rms.services.BoxCommonSearchService"/>
+    <dubbo:reference id="boxFirmwareInfoService" interface="com.cmiot.rms.services.BoxFirmwareInfoService"/>
+    <dubbo:reference id="hdVersionService" interface="com.cmiot.rms.services.HdVersionService"/>
+    <dubbo:reference id="boxDeviceManageService" interface="com.cmiot.rms.services.BoxDeviceManageService"/>
+
+    <dubbo:reference id="boxFirmwareUpgradeTaskService" interface="com.cmiot.rms.services.BoxFirmwareUpgradeTaskService"/>
+    <dubbo:reference id="boxBusinessCategoryService" interface="com.cmiot.rms.services.BoxBusinessCategoryService"/>
+    <dubbo:reference id="boxWorkOrderManagerService" interface="com.cmiot.rms.services.BoxWorkOrderManagerService"/>
+    <!--POOS-->
+    <dubbo:reference id="workOrderStandardInterface" interface="com.cmiot.rms.services.WorkOrderStandardInterface"/>
+    <dubbo:reference id="dataQueryService" interface="com.cmiot.rms.services.DataQueryService"/>
+    <dubbo:reference id="deviceSettingService" interface="com.cmiot.rms.services.DeviceSettingService"/>
+    <dubbo:reference id="deviceDiagnoseService" interface="com.cmiot.rms.services.DeviceDiagnoseService"/>
+</beans>
